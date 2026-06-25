@@ -1,202 +1,131 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal homepage for Germin Khalil featuring an introduction, coursework, interests, and contact information.">
-    <title>Germin Khalil | Personal Homepage</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fireworks Over the Harbor</title>
+  <link rel="stylesheet" href="stars-and-stripes.css" />
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar" aria-label="Main navigation">
-            <a class="logo" href="#home">My Portfolio</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#coursework">Coursework</a></li>
-                <li><a href="#interests">Interests</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-text">
-                <p class="eyebrow">Welcome to my personal homepage</p>
-                <h1>Hello, I'm Germin</h1>
-                <p>
-                    I am a Computer Science student at Georgia State University with an interest in
-                    software engineering, teamwork, and creative problem solving.
-                </p>
-                <a class="main-button" href="#coursework">Explore My Work</a>
-            </div>
-            <div class="hero-image-card">
-                <img src="images/profile.jpg" alt="Portrait of Germin Khalil on a boat near the mountains">
-            </div>
-        </section>
+  <div id="welcome-screen">
+    <div class="welcome-content">
+        <h1>🇺🇸 Happy 4th America 🇺🇸</h1>
+        <p>Click anywhere to begin the celebration</p>
+    </div>
+</div>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <div class="underline"></div>
-            <div class="about-card">
-                <article>
-                    <h3>Academic Background</h3>
-                    <p>
-                        My academic background is in Computer Science, where I continue building skills in
-                        coding, communication, critical thinking, and project organization.
-                    </p>
-                </article>
-                <article>
-                    <h3>Interests</h3>
-                    <p>
-                        Outside of school, I enjoy traveling, volleyball, pickleball, music, and learning new
-                        technologies that can help me become a stronger developer.
-                    </p>
-                </article>
-                <article>
-                    <h3>Goals</h3>
-                    <p>
-                        My goal is to graduate, grow as a software engineer, and contribute to meaningful
-                        projects that help people and solve real problems.
-                    </p>
-                </article>
-            </div>
-        </section>
+  <audio id="bgMusic" loop>
+    <source src="assets/music/happy_bday_usa.mp3" type="audio/mpeg">
+</audio>
 
-        <section id="coursework" class="section coursework-section">
-            <h2>My Coursework &amp; Assignments</h2>
-            <div class="underline"></div>
-            <div class="coursework-card">
-                <span class="tag">📚 Coursework</span>
-                <h3>My Coursework</h3>
+<script>
 
-                <div class="course-group">
-                    <h4>In-Class Work</h4>
-                    <div class="assignment-grid">
-                        <a href="#coursework">In-Class Activity 1</a>
-                        <a href="#coursework">In-Class Activity 2</a>
-                        <a href="#coursework">In-Class Activity 3</a>
-                    </div>
-                </div>
+const welcome = document.getElementById("welcome-screen");
+const music = document.getElementById("bgMusic");
 
-                <div class="course-group">
-                    <h4>Coursework (CW)</h4>
-                    <div class="assignment-grid">
-                        <a href="#coursework">Coursework Assignment 1</a>
-                        <a href="#coursework">Coursework Assignment 2</a>
-                        <a href="#coursework">Coursework Assignment 3</a>
-                    </div>
-                </div>
+welcome.addEventListener("click", () => {
 
-                <div class="course-group">
-                    <h4>Homework (HW)</h4>
-                    <div class="assignment-grid">
-                        <a href="#coursework">Homework Assignment 1</a>
-                        <a href="#coursework">Homework Assignment 2</a>
-                        <a href="#coursework">Homework Assignment 3</a>
-                    </div>
-                </div>
+    music.play();
 
-                <div class="course-group">
-                    <h4>Project Work (PW)</h4>
-                    <div class="assignment-grid">
-                        <a href="#coursework">Project 1</a>
-                        <a href="#coursework">Project 2</a>
-                        <a href="#coursework">Project 3</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    welcome.classList.add("hidden");
 
-        <section id="interests" class="section">
-            <h2>Hobbies &amp; Interests</h2>
-            <div class="underline"></div>
-            <div class="interest-grid">
-                <article class="interest-card">
-                    <img src="images/volleyball.jpg" alt="Germin playing volleyball in a gym">
-                    <h3>Volleyball</h3>
-                    <p>Volleyball helps me stay active while building teamwork and communication skills.</p>
-                </article>
-                <article class="interest-card">
-                    <img src="images/pickleball.jpg" alt="Germin and another player playing pickleball indoors">
-                    <h3>Pickleball</h3>
-                    <p>Pickleball is a fun way to exercise, compete, and spend time with others.</p>
-                </article>
-                <article class="interest-card">
-                    <img src="images/travel.png" alt="Collage of travel photos from Europe">
-                    <h3>Traveling</h3>
-                    <p>Traveling allows me to experience new places, cultures, food, and history.</p>
-                </article>
-                <article class="interest-card">
-                    <img src="images/coding.jpg" alt="Laptop screen showing computer code">
-                    <h3>Coding</h3>
-                    <p>Coding helps me create useful projects and improve my problem-solving skills.</p>
-                </article>
-            </div>
-        </section>
+    setTimeout(() => {
+        welcome.remove();
+    }, 800);
 
-        <section id="contact" class="section contact-section">
-            <h2>Connect With Me</h2>
-            <div class="underline"></div>
-            <p class="section-intro">Click a tab below to choose a contact option.</p>
+});
 
-            <div class="contact-tabs">
-                <input type="radio" id="tab-email" name="contact-tab" checked>
-                <label for="tab-email">Email</label>
+</script>
+<script>
+window.addEventListener("load", () => {
+    document.body.addEventListener("click", () => {
+        const music = document.getElementById("bgMusic");
+        music.play();
+    }, { once: true });
+});
+</script>
 
-                <input type="radio" id="tab-linkedin" name="contact-tab">
-                <label for="tab-linkedin">LinkedIn</label>
+  <header class="top-bar">
+    <a href="#page1" class="logo">★ Stars & Stripes Canvas</a>
 
-                <input type="radio" id="tab-github" name="contact-tab">
-                <label for="tab-github">GitHub</label>
+    <nav>
+      <a href="#page1" aria-label="Go to Freedom's Dawn">01</a>
+      <a href="#page2" aria-label="Go to Patriot's Plaza">02</a>
+      <a href="#page3" aria-label="Go to United We Stand">03</a>
+    </nav>
+  </header>
 
-                <input type="radio" id="tab-gsu" name="contact-tab">
-                <label for="tab-gsu">GSU</label>
+  <main class="storybook">
 
-                <div class="tab-panel email-panel">
-                    <h3>📧 Email Me</h3>
-                    <p>Send me a message through my student email.</p>
-                    <a href="mailto:gkhalil2@student.gsu.edu">gkhalil2@student.gsu.edu</a>
-                </div>
+    <section id="page1" class="scene dawn">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/images/fireworks.mp4" type="video/mp4" />
+      </video>
 
-                <div class="tab-panel linkedin-panel">
-                    <h3>💼 LinkedIn Profile</h3>
-                    <p>Connect with me professionally.</p>
-                    <a href="https://www.linkedin.com/in/germin-khalil-0772ab261/" target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
-                </div>
+      <div class="dark-overlay"></div>
+      <div class="stars"></div>
+      <div class="flag"></div>
+      <div class="water"></div>
+      <div class="boat boat-one"></div>
+      <div class="crowd"></div>
 
-                <div class="tab-panel github-panel">
-                    <h3>💻 GitHub Profile</h3>
-                    <p>View my code repositories and future projects.</p>
-                    <a href="https://github.com/germinkhalil2" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
-                </div>
+      <div class="scene-title left-title">
+        <span>01</span>
+        <h1>Freedom’s Dawn</h1>
+        <a href="#page2">Begin ★</a>
+      </div>
+    </section>
 
-                <div class="tab-panel gsu-panel">
-                    <h3>🏫 Georgia State University</h3>
-                    <p>Learn more about Georgia State University.</p>
-                    <a href="https://www.gsu.edu" target="_blank" rel="noopener noreferrer">Visit GSU</a>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section id="page2" class="scene plaza">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/images/fireworks.mp4" type="video/mp4" />
+      </video>
 
-    <footer class="footer">
-        <p>&copy; 2026 Germin Khalil | Personal Homepage</p>
-    </footer>
-        <script>
-        const logo = document.querySelector(".logo");
+      <div class="dark-overlay"></div>
+      <div class="stars"></div>
 
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 100) {
-                logo.style.opacity = "0";
-                logo.style.transform = "translateY(-10px)";
-            } else {
-                logo.style.opacity = "1";
-                logo.style.transform = "translateY(0)";
-            }
-        });
-    </script>
+      <div class="smoke smoke-one"></div>
+      <div class="smoke smoke-two"></div>
+
+      <div class="skyline"></div>
+      <div class="water reflection-water"></div>
+
+      <div class="boat boat-two"></div>
+      <div class="boat boat-three"></div>
+
+      <div class="crowd dancing"></div>
+
+      <div class="scene-title center-title">
+        <span>02</span>
+        <h1>Patriot’s Plaza</h1>
+        <a href="#page3">Next ★</a>
+      </div>
+    </section>
+
+    <section id="page3" class="scene unity">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/images/fireworks.mp4" type="video/mp4" />
+      </video>
+
+      <div class="dark-overlay"></div>
+      <div class="stars"></div>
+      <div class="flag-bg"></div>
+      <div class="sparklers"></div>
+      <div class="crowd dancing"></div>
+
+      <div class="scene-title right-title">
+        <span>03</span>
+        <h1>United We Stand</h1>
+        <a href="#page1">Restart ★</a>
+      </div>
+      <div class="unity-image">
+    <img src="assets/images/unitedwestand.png" alt="United We Stand">
+</div>
+
+    </section>
+
+  </main>
+
 </body>
 </html>
